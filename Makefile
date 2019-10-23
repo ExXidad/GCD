@@ -3,15 +3,15 @@
 #
 
 SRCS_f95d1 = \
+searching_procedures.f95 \
 main.f95 \
 append.f95 \
-binsearch.f95 \
 decompose.f95 
 
 OBJS_f95d1 = \
+searching_procedures.o \
 main.o \
 append.o \
-binsearch.o \
 decompose.o 
 
 SRC_DIR_f95d1 = 
@@ -44,14 +44,14 @@ clean :
 	rm -f $(EXE_DIR)$(EXE)
 
 # Dependencies of files
+searching_procedures.o: \
+    searching_procedures.f95
 main.o: \
     main.f95 \
     decompose.o \
-    binsearch.o
+    searching_procedures.o
 append.o: \
     append.f95
-binsearch.o: \
-    binsearch.f95
 decompose.o: \
     decompose.f95 \
     append.o
