@@ -5,13 +5,13 @@
 SRCS_f95d1 = \
 main.f95 \
 append.f95 \
-binsearch.f95 \
+searching_procedures.f95 \
 decompose.f95 
 
 OBJS_f95d1 = \
 main.o \
 append.o \
-binsearch.o \
+searching_procedures.o \
 decompose.o 
 
 SRC_DIR_f95d1 = 
@@ -47,11 +47,11 @@ clean :
 main.o: \
     main.f95 \
     decompose.o \
-    binsearch.o
+    searching_procedures.o
 append.o: \
     append.f95
-binsearch.o: \
-    binsearch.f95
+searching_procedures.o: \
+    searching_procedures.f95
 decompose.o: \
     decompose.f95 \
     append.o
